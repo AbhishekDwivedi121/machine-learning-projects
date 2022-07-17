@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Price Predictor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+
+
+    <h1>Laptop Price Predictor</h1>
+
+    <div class="container" >
+        <form action="/" method="get">
+            <div class="mb-3">
+              <label class="form-label">Enter Company Name</label>
+              <br>
+              <select class="form-select" aria-label="Default select example" name="company">
+                {% for c in company %}
+                <option value="{{ c }}">{{ c }}</option>
+                {% endfor %}
+              </select>
+             
+            </div>
+            <div class="mb-3">
+              <label class="form-label"> Enter Inches </label>
+              <select class="form-select" aria-label="Default select example" name="inches">
+                {% for i in inch %}
+                <option value="{{ i }}">{{ i }}</option>
+                {% endfor %}
+               </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label"> Enter Ram </label>
+              <select class="form-select" aria-label="Default select example" name="ram">
+                {% for r in ram %}
+                <option value="{{ r }}">{{ r }}</option>
+                {% endfor %}
+               </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label"> Enter Graphic Processor </label>
+              <select class="form-select" aria-label="Default select example" name="gpu">
+                {% for g in gpu %}
+                <option value="{{ g }}">{{ g }}</option>
+                {% endfor %}
+               </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label"> Enter Display Type </label>
+              <select class="form-select" aria-label="Default select example" name="display">
+                {% for d in display %}
+                <option value="{{ d }}">{{ d }}</option>
+                {% endfor %}
+               </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label"> Enter Processor Type </label>
+              <select class="form-select" aria-label="Default select example" name="processor">
+                {% for p in processor %}
+                <option value="{{ p }}">{{ p }}</option>
+                {% endfor %}
+               </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label"> Enter HDD Type </label>
+              <select class="form-select" aria-label="Default select example" name="hdd">
+                {% for h in hdd %}
+                <option value="{{ h }}">{{ h }}</option>
+                {% endfor %}
+               </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label"> Enter SSD Type </label>
+              <select class="form-select" aria-label="Default select example" name="ssd">
+                {% for s in ssd %}
+                <option value="{{ s }}">{{ s }}</option>
+                {% endfor %}
+               </select>
+            </div>
+            
+            <button type="submit" class="btn btn-primary text-center">Submit</button>
+          </form>
+
+
+          <h2>Price:- {{ pre }}</h2>
+
+
+        
+
+    </div>
+</body>
+</html>
+
+<style>
+h1{
+  background-color: navy;
+  color: white;
+  text-align: center;
+}
+h2{
+  text-align:  center;
+}
+
+</style>
